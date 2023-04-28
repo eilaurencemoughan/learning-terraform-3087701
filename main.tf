@@ -53,22 +53,4 @@ module "blog_sg" {
   egress_rules = ["all-all"]
   egress_cidr_blocks = ["0.0.0.0/0"]
 }
-resource "aws_route_table" "example" {
-  vpc_id = module.blog_vpc.vpc_id
 
-  route {
-    cidr_block = "10.0.1.0/24"
-    
-  }
-
-  route {
-    ipv6_cidr_block        = "::/0"
-    
-    
-
-  }
-
-  tags = {
-    Name = "example"
-  }
-}
